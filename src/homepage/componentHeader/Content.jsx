@@ -33,14 +33,14 @@ function Content() {
   return (
     <div>
       <ThemeProvider theme={theme}>
-        <Typography variant="textHead">
-          Resonate with the visitor's problem
+        <Typography variant="h3">
+          Resonate with the <br /> visitor's problem
         </Typography>
 
-        <Typography variant="textCon">
+        <Typography variant="subtitle1">
           <p>
             Describe exactly what your product or service does to solve this
-            problem. Avoid using verbose words or phrases.
+            problem. <br/>Avoid using verbose words or phrases.
           </p>
         </Typography>
 
@@ -59,10 +59,11 @@ function Content() {
           </Button>
         </Box>
 
-        <Typography variant="textTip">
+        <Typography variant="caption">
           <p>
             By clicking Sign Up you're confirming that you agree with our{" "}
-            <u>Terms and Conditions</u>.
+            <Box sx={{cursor:'pointer'}}><u>Terms and Conditions</u>.</Box>
+            
           </p>
         </Typography>
       </ThemeProvider>

@@ -18,7 +18,7 @@ function Navbar() {
             justifyContent: "space-between",
             alignItems: "center",
             py: 1,
-            px: 8,
+
             borderBottom: 1,
           }}
         >

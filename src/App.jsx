@@ -16,132 +16,178 @@ import Social from "./homepage/componentVisitor/Social";
 import Fequently from "./homepage/componentQuestion/Fequently";
 import Question from "./homepage/componentQuestion/Question";
 import Footer from "./homepage/componentFooter/Footer";
+import datahightlight from "./data/datahightlight";
+import datashortsum from "./data/datashortsum";
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+
 
 function App() {
+  const hightlightEls = datahightlight.map((hightLight, index) => {
+    return <Highlight key={index} hightLight={hightLight} />;
+  });
+
+  const shortsumEls = datashortsum.map((shortSum, index) => {
+    return <Shortsum key={index} shortSum={shortSum} />;
+  });
+
   return (
     <div>
-      <header>
-        <Navbar />
-      </header>
+      <Container maxWidth="xl" sx={{ px: 0 }}>
+        <header>
+          <Navbar />
+        </header>
 
-      <Box sx={{ px: 8 }}>
-        <div>
-          <Box sx={{ display: "flex", gap: 20, my: 14 }}>
-            <Box sx={{ display: "flex", alignItems: "center" }}>
-              <Content />
+        <Box>
+          <div>
+            <Box sx={{ my: 14 }}>
+              <Grid container spacing={4} alignItems="center">
+                <Grid xs={6}>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignSelf: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <Content />
+                  </Box>
+                </Grid>
+
+                <Grid xs={6}>
+                  <Box sx={{ display: "flex", justifyContent: "center" }}>
+                    <Contentimg />
+                  </Box>
+                </Grid>
+              </Grid>
             </Box>
+          </div>
 
-            <Box>
-              <Contentimg />
+          <div>
+            <Box sx={{ my: 14 }}>
+              <Box
+                sx={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(3, 1fr)",
+                  gap: 5,
+                }}
+              >
+                {hightlightEls}
+              </Box>
             </Box>
-          </Box>
-        </div>
+          </div>
 
-        <div>
-          <Box sx={{ display: "flex", justifyContent: "center", my: 14 }}>
-            <Grid container spacing={4}>
+          <div>
+            <Box sx={{ my: 14 }}>
+              <Grid container>
+                <Grid xs={6}>
+                  <Box sx={{ mr: 10 }}>
+                    <Headline />
+                  </Box>
+                </Grid>
+                <Grid xs={6}>
+                  <Box
+                    sx={{
+                      display: "grid",
+                      gridTemplateRows: "repeat(3, 1fr)",
+                      gap: 5,
+                    }}
+                  >
+                    {shortsumEls}
+                  </Box>
+                </Grid>
+              </Grid>
+            </Box>
+          </div>
+
+          <div>
+            <Box sx={{ my: 14 }}>
+              <Grid container spacing={4} alignItems="center">
+                <Grid xs={6}>
+                  <Contentimg />
+                </Grid>
+
+                <Grid xs={6}>
+                  <Describe />
+                </Grid>
+              </Grid>
+            </Box>
+          </div>
+
+          <div>
+            <Box sx={{ my: 14 }}>
+              <Star />
+            </Box>
+          </div>
+
+          <div>
+            <Box sx={{ my: 14 }}>
+              <Grid container spacing={4} alignItems="center">
+                <Grid xs={6}>
+                  <Describetwo />
+                </Grid>
+
+                <Grid xs={6}>
+                  <Contentimg />
+                </Grid>
+              </Grid>
+            </Box>
+          </div>
+
+          <div>
+            <Box sx={{ my: 14 }}>
+              <Star />
+            </Box>
+          </div>
+
+          <div>
+            <Box sx={{ my: 14 }}>
+              <Grid container spacing={4} alignItems="center">
+                <Grid xs={6}>
+                  <Contentimg />
+                </Grid>
+
+                <Grid xs={6}>
+                  <Describethree />
+                </Grid>
+              </Grid>
+            </Box>
+          </div>
+
+          <div>
+            <Box sx={{ my: 14 }}>
+              <Star />
+            </Box>
+          </div>
+
+          <div>
+            <Box sx={{ my: 14 }}>
+              <Visitor />
+              <Social />
+            </Box>
+          </div>
+
+          <div>
+            <Grid container gap={10} justifyContent="center" alignItems="center">
               <Grid xs={4}>
-                <Highlight />
+                <Fequently />
               </Grid>
 
-              <Grid xs={4}>
-                <Highlight />
-              </Grid>
-
-              <Grid xs={4}>
-                <Highlight />
+              <Grid xs={6}>
+                <Question />
               </Grid>
             </Grid>
-          </Box>
-        </div>
+          </div>
 
-        <div>
-          <Box sx={{ my: 14 }}>
-            <Grid container>
-              <grid xs={6}>
-                <Box sx={{ mr: 10 }}>
-                  <Headline />
-                </Box>
-              </grid>
-              <grid xs={6}>
-                <Shortsum />
-                <br />
-
-                <Shortsum />
-                <br />
-
-                <Shortsum />
-                <br />
-
-                <Shortsum />
-              </grid>
-            </Grid>
-          </Box>
-        </div>
-
-        <div>
-          <Box sx={{ my: 14 }}>
-            <Contentimg />
-            <Describe />
-          </Box>
-        </div>
-
-        <div>
-          <Box sx={{ my: 14 }}>
-            <Star />
-          </Box>
-        </div>
-
-        <div>
-          <Box sx={{ my: 14 }}>
-            <Describetwo />
-            <Contentimg />
-          </Box>
-        </div>
-
-        <div>
-          <Box sx={{ my: 14 }}>
-            <Star />
-          </Box>
-        </div>
-
-        <div>
-          <Box sx={{ my: 14 }}>
-            <Contentimg />
-            <Describethree />
-          </Box>
-        </div>
-
-        <div>
-          <Box sx={{ my: 14 }}>
-            <Star />
-          </Box>
-        </div>
-
-        <div>
-          <Box sx={{ my: 14 }}>
-            <Visitor />
-            <Social />
-          </Box>
-        </div>
-
-        <div>
-          <Box
-            sx={{ display: "flex", justifyContent: "center", gap: 5, my: 14 }}
-          >
-            <Fequently />
-            <Question />
-          </Box>
-        </div>
-
-        <footer>
-          <Box sx={{ my: 14 }}>
-            <Footer />
-          </Box>
-        </footer>
-
-        
-      </Box>
+          <footer>
+            <Box sx={{ my: 14 }}>
+              <Footer />
+            </Box>
+          </footer>
+        </Box>
+      </Container>
     </div>
   );
 }

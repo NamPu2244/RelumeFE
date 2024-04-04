@@ -1,8 +1,14 @@
 import React from "react";
 import highlight from "/Img/Highlight/Vector.svg";
-import { Box, ThemeProvider, Typography, createTheme } from "@mui/material";
+import {
+  Box,
+  Grid,
+  ThemeProvider,
+  Typography,
+  createTheme,
+} from "@mui/material";
 
-function Highlight() {
+function Highlight(props) {
   const theme = createTheme({
     typography: {
       textHead: {
@@ -12,35 +18,42 @@ function Highlight() {
       textCon: {
         fontSize: 16,
       },
-      textTip: {
-        fontSize: 12,
+      h5: {
+        fontWeight: "bold",
       },
     },
   });
+
+  const { hightLight } = props;
   return (
     <div>
-      <Box sx={{ maxWidthdth: 370, height: 226, display: "flex", justifyContent:"center" }}>
-        <div>
-          <ThemeProvider theme={theme}>
-            <Box sx={{ mb: 3 }}>
-              <img src={highlight} />
-            </Box>
+      <Box
+        sx={{
+          maxWidthdth: 370,
+          height: 226,
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
 
-            <Typography variant="textHead">
-              <Box sx={{ mb: 3 }}>
-                <div>Highlight benefit one</div>
-              </Box>
-            </Typography>
+            <div>
+              <ThemeProvider theme={theme}>
+                <Box sx={{ mb: 3 }}>
+                  <img src={highlight} />
+                </Box>
 
-            <Typography variant="textCon">
-              <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse varius enim in eros elementum tristique. Duis
-                cursus, mi quis viverra ornare, eros dolor interdum nulla.
-              </div>
-            </Typography>
-          </ThemeProvider>
-        </div>
+                <Typography variant="h5">
+                  <Box sx={{ mb: 3 }}>
+                    <div>{hightLight.htitle}</div>
+                  </Box>
+                </Typography>
+
+                <Typography variant="body2">
+                  <div>{hightLight.hcon}</div>
+                </Typography>
+              </ThemeProvider>
+            </div>
+
       </Box>
     </div>
   );

@@ -17,14 +17,14 @@ function Visitor() {
       },
     },
     typography: {
-      textHead: {
-        fontSize: 56,
+      h3: {
+        fontSize: 48,
         fontWeight: "bold",
       },
-      textCon: {
+      body2: {
         fontSize: 18,
       },
-      textTip: {
+      caption : {
         fontSize: 12,
       },
     },
@@ -32,42 +32,64 @@ function Visitor() {
   return (
     <div>
       <ThemeProvider theme={theme}>
-        <Typography>
+        <Box sx={{ display: "flex", justifyContent: "center" }}>
           <div>
-            Call to action that invites visitor to try the product for free
-          </div>
-        </Typography>
+            <Box sx={{ textAlign: "center" }}>
+              <Typography variant="h3">
+                <div>
+                  Call to action that invites visitor to <br/> try the product for
+                  free
+                </div>
+              </Typography>
 
-        <Typography>
-          <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            varius enim in eros elementum tristique.
-          </div>
-        </Typography>
+              <Typography variant="body2">
+                <Box sx={{ mt: 3 }}>
+                  <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Suspendisse varius enim in eros <br/> elementum tristique.
+                  </div>
+                </Box>
+              </Typography>
 
-        <div>
-          <Box sx={{ display: "flex", justifyContent: "flex-start", gap: 2 }}>
-            <Box
-              sx={{
-                width: 357,
-                maxWidth: "100%",
-              }}
-            >
-              <TextField fullWidth label="Enter your email" id="fullWidth" />
+              <div>
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    gap: 2,
+                    mt: 3,
+                  }}
+                >
+                  <Box
+                    sx={{
+                      width: 357,
+                      maxWidth: "100%",
+                    }}
+                  >
+                    <TextField
+                      fullWidth
+                      label="Enter your email"
+                      id="fullWidth"
+                    />
+                  </Box>
+
+                  <Button variant="contained" color="black">
+                    Try for free
+                  </Button>
+                </Box>
+              </div>
+
+              <Typography variant="caption">
+                <Box sx={{ mt: 2 }}>
+                  <div>
+                    By clicking Sign Up you're confirming that you agree with
+                    our Terms and Conditions.
+                  </div>
+                </Box>
+              </Typography>
             </Box>
-
-            <Button variant="contained" color="black">
-              Try for free
-            </Button>
-          </Box>
-        </div>
-
-        <Typography>
-          <div>
-            By clicking Sign Up you're confirming that you agree with our Terms
-            and Conditions.
           </div>
-        </Typography>
+        </Box>
       </ThemeProvider>
     </div>
   );

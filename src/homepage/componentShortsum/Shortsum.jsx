@@ -3,7 +3,10 @@ import highlight from "/Img/Highlight/Vector.svg";
 import divider from "/Img/Highlight/Divider.svg";
 import { Box, Typography } from "@mui/material";
 
-function Shortsum() {
+function Shortsum(props) {
+
+  const { shortSum } = props;
+
   return (
     <div>
       <Box sx={{display:'flex' , gap:5}}>
@@ -24,14 +27,13 @@ function Shortsum() {
         </div>
 
         <div>
-          <Typography>
-            <div>Short summary of step one</div>
+          <Typography  variant="h5">
+            <div>{shortSum.Stitle}</div>
           </Typography>
 
-          <Typography>
+          <Typography variant="body1">
             <div>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique.
+              {shortSum.Scon}
             </div>
           </Typography>
         </div>
