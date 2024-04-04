@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, ThemeProvider, createTheme } from "@mui/material";
+import { Box, Divider, ThemeProvider, createTheme } from "@mui/material";
 import Navlink from "./Navlink";
 import Navbutton from "./Navbutton";
 import Navlogo from "./Navlogo";
@@ -19,7 +19,6 @@ function Navbar() {
             alignItems: "center",
             py: 1,
 
-            borderBottom: 1,
           }}
         >
           <Navlogo />
@@ -27,6 +26,7 @@ function Navbar() {
           <Navbutton />
         </Box>
       </ThemeProvider>
+      <Divider></Divider>
     </div>
   );
 }
