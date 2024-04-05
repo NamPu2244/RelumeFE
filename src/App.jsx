@@ -30,6 +30,7 @@ function App() {
     return <Highlight key={index} hightLight={hightLight} />;
   });
 
+  console.log(hightlightEls)
   const shortsumEls = datashortsum.map((shortSum, index) => {
     return <Shortsum key={index} shortSum={shortSum} />;
   });
@@ -38,14 +39,11 @@ function App() {
     return <Question key={index} quesTions ={quesTions}/>
   })
 
-  console.log(questionEls)
 
   return (
     <div>
-      <Container maxWidth="xl" sx={{ px: 0 }}>
-        <header>
-          <Navbar />
-        </header>
+
+
 
         <Box>
           <div>
@@ -188,13 +186,8 @@ function App() {
             </Grid>
           </div>
 
-          <footer>
-            <Box sx={{ my: 14 }}>
-              <Footer />
-            </Box>
-          </footer>
+
         </Box>
-      </Container>
     </div>
   );
 }

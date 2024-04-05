@@ -29,31 +29,29 @@ function Highlight(props) {
     <div>
       <Box
         sx={{
-          maxWidthdth: 370,
+          maxWidth: 370,
           height: 226,
           display: "flex",
           justifyContent: "center",
         }}
       >
+        <div>
+          <ThemeProvider theme={theme}>
+            <Box sx={{ mb: 3 }}>
+              <img src={highlight} />
+            </Box>
 
-            <div>
-              <ThemeProvider theme={theme}>
-                <Box sx={{ mb: 3 }}>
-                  <img src={highlight} />
-                </Box>
+            <Typography variant="h5">
+              <Box sx={{ mb: 3 }}>
+                <div>{hightLight.htitle}</div>
+              </Box>
+            </Typography>
 
-                <Typography variant="h5">
-                  <Box sx={{ mb: 3 }}>
-                    <div>{hightLight.htitle}</div>
-                  </Box>
-                </Typography>
-
-                <Typography variant="body2">
-                  <div>{hightLight.hcon}</div>
-                </Typography>
-              </ThemeProvider>
-            </div>
-
+            <Typography variant="body2">
+              <div>{hightLight.hcon}</div>
+            </Typography>
+          </ThemeProvider>
+        </div>
       </Box>
     </div>
   );
