@@ -22,6 +22,7 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
+import dataquestion from "./data/dataquestion";
 
 
 function App() {
@@ -32,6 +33,12 @@ function App() {
   const shortsumEls = datashortsum.map((shortSum, index) => {
     return <Shortsum key={index} shortSum={shortSum} />;
   });
+
+  const questionEls = dataquestion.map((quesTions,index) => {
+    return <Question key={index} quesTions ={quesTions}/>
+  })
+
+  console.log(questionEls)
 
   return (
     <div>
@@ -176,7 +183,7 @@ function App() {
               </Grid>
 
               <Grid xs={6}>
-                <Question />
+                {questionEls}
               </Grid>
             </Grid>
           </div>
