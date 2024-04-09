@@ -1,15 +1,10 @@
 import { ThemeProvider } from "@emotion/react";
-import { Typography, Box, createMuiTheme, createTheme } from "@mui/material";
+import { Typography, Box,  createTheme } from "@mui/material";
 import React from "react";
 
 function Headplans() {
   const theme = createTheme({
-    palette: {
-      black: {
-        main: "#212121",
-        contrastText: "#fff",
-      },
-    },
+
     typography: {
       caption: {
         fontSize: 16,

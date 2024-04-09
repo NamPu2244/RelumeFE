@@ -11,13 +11,6 @@ import {
 function Highlight(props) {
   const theme = createTheme({
     typography: {
-      textHead: {
-        fontSize: 24,
-        fontWeight: "bold",
-      },
-      textCon: {
-        fontSize: 16,
-      },
       h5: {
         fontWeight: "bold",
       },
