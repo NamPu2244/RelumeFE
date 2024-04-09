@@ -9,22 +9,9 @@ import React from "react";
 
 function Describethree() {
   const theme = createTheme({
-    palette: {
-      black: {
-        main: "#212121",
-        contrastText: "#fff",
-      },
-    },
     typography: {
-      textHead: {
-        fontSize: 16,
-        fontWeight: "bold",
-      },
       subtitle2: {
         fontWeight: "bold",
-      },
-      textTip: {
-        fontSize: 18,
       },
     },
   });

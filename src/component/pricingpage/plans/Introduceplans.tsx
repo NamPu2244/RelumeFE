@@ -6,7 +6,6 @@ function Introduceplans() {
   return (
     <div>
         <Headplans/>
-        <Pricingplans/>
     </div>
   )
 }

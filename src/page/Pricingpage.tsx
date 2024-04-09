@@ -7,6 +7,7 @@ import { Box } from "@mui/material";
 import datahighlightfeat from "../data/dataplans/datahighlightfeat";
 import Highlight from "../component/pricingpage/Hightlightfeat/Highlight";
 import Tableplans from "../component/pricingpage/tableplans/Tableplans";
+import Buttonplans from "../component/pricingpage/plans/Buttonplans";
 
 function Pricingpage() {
   const plansEls = datapro.map((planS, index) => {
@@ -19,20 +20,34 @@ function Pricingpage() {
 
   return (
     <div>
-      <Introduceplans />
-      <Box
-        sx={{
-          display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
-          gap: 5,
-        }}
-      >
-        {plansEls}
-      </Box>
+      <Box sx={{ my: 14 }}>
+        <Box sx={{ mb: 12 }}>
+          <Introduceplans />
+        </Box>
 
-      <Box>{highEls}</Box>
-      
-      <Box><Tableplans/></Box>
+        <Box sx={{}}>
+          <Box sx={{textAlign:'center' , mb:12}}>
+            <Buttonplans />
+          </Box>
+          
+
+          <Box
+            sx={{
+              display: "grid",
+              gridTemplateColumns: "repeat(3, 1fr)",
+              gap: 5,
+            }}
+          >
+            {plansEls}
+          </Box>
+        </Box>
+
+        <Box>{highEls}</Box>
+
+        <Box>
+          <Tableplans />
+        </Box>
+      </Box>
     </div>
   );
 }

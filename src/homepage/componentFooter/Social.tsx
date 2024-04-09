@@ -2,7 +2,7 @@ import { Box } from '@mui/material'
 import React from 'react'
 import facebook from "/Img/Social/Facebook.svg";
 import ig from "/Img/Social/Ig.svg";
-import x from "/Img/Social/X.svg";
+import x from '/Img/Social/X.svg';
 import linkin from "/Img/Social/In.svg";
 
 

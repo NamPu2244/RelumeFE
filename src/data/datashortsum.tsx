@@ -1,4 +1,7 @@
-const datashortsum = [
+const datashortsum:{
+  Stitle:string;
+  Scon:string;
+}[] = [
   {
     Stitle: "Short summary of step one",
     Scon: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",

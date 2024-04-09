@@ -1,4 +1,7 @@
-const dataquestion = [
+const dataquestion:{
+  title:string;
+  content:string;
+}[] = [
   {
     title: "Question text goes here",
     content: "Aws text goes here",

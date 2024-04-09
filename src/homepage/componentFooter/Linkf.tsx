@@ -3,23 +3,11 @@ import React from "react";
 
 function Linkf() {
   const theme = createTheme({
-    palette: {
-      black: {
-        main: "#212121",
-        contrastText: "#fff",
-      },
-    },
     typography: {
       caption: {
         fontSize: 16,
         fontWeight: 500,
-      },
-      textSer: {
-        fontSize: 14,
-      },
-      textTip: {
-        fontSize: 18,
-      },
+      }
     },
   });
   return (

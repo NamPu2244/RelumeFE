@@ -23,6 +23,7 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import dataquestion from "./data/dataquestion";
+import React from "react";
 
 
 function App() {
@@ -30,7 +31,6 @@ function App() {
     return <Highlight key={index} hightLight={hightLight} />;
   });
 
-  console.log(hightlightEls)
   const shortsumEls = datashortsum.map((shortSum, index) => {
     return <Shortsum key={index} shortSum={shortSum} />;
   });

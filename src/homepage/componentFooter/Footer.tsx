@@ -12,23 +12,10 @@ import {
 
 function Footer() {
   const theme = createTheme({
-    palette: {
-      black: {
-        main: "#212121",
-        contrastText: "#fff",
-      },
-    },
     typography: {
-      textLink: {
-        fontSize: 16,
-        fontWeight: 500,
-      },
       caption: {
         fontSize: 14,
-      },
-      textTip: {
-        fontSize: 18,
-      },
+      }
     },
   });
   return (
