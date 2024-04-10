@@ -25,44 +25,6 @@ function Question(props) {
   };
   return (
     <div>
-      {/* <Box sx={{ display: "grid", gap: 4 }}>
-        <Divider></Divider>
-        <item>
-          <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-            <Typography variant="h6">Question text goes here</Typography>
-            <KeyboardArrowDownIcon sx={{cursor:'pointer'}}></KeyboardArrowDownIcon>
-          </Box>
-        </item>
-        <Divider></Divider>
-        <item>
-          <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-            <Typography variant="h6">Question text goes here</Typography>
-            <KeyboardArrowDownIcon sx={{cursor:'pointer'}}></KeyboardArrowDownIcon>
-          </Box>{" "}
-        </item>{" "}
-        <Divider></Divider>
-        <item>
-          <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-            <Typography variant="h6">Question text goes here</Typography>
-            <KeyboardArrowDownIcon sx={{cursor:'pointer'}}></KeyboardArrowDownIcon>
-          </Box>{" "}
-        </item>{" "}
-        <Divider></Divider>
-        <item>
-          <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-            <Typography variant="h6">Question text goes here</Typography>
-            <KeyboardArrowDownIcon sx={{cursor:'pointer'}}></KeyboardArrowDownIcon>
-          </Box>{" "}
-        </item>{" "}
-        <Divider></Divider>
-        <item>
-          <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-            <Typography variant="h6">Question text goes here</Typography>
-            <KeyboardArrowDownIcon sx={{cursor:'pointer'}}></KeyboardArrowDownIcon>
-          </Box>{" "}
-        </item>{" "}
-        <Divider></Divider>
-      </Box> */}
       <List
         sx={{ width: "100%", bgcolor: "background.paper" }}
         component="nav"
