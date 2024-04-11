@@ -4,7 +4,7 @@ import React from "react";
 function Navbutton() {
   const theme = createTheme({
     palette: {
-      black: {
+      primary: {
         main: "#212121",
       }
     },
@@ -13,7 +13,7 @@ function Navbutton() {
   return (
     <div>
       <ThemeProvider theme={theme}>
-        <Button variant="contained" color="black">
+        <Button variant="contained" color="primary">
           <Typography variant="caption" color='white'>
             Try for free
           </Typography>

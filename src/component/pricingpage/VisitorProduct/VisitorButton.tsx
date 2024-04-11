@@ -4,17 +4,17 @@ import React from "react";
 function VisitorButton() {
   const theme = createTheme({
     palette: {
-      black: {
+      primary: {
         main: "#212121",
         contrastText: "#fff",
       },
-    }
+    },
   });
   return (
     <div>
       <ThemeProvider theme={theme}>
         <Box sx={{ textAlign: "center" }}>
-          <Button variant="contained" color="black">Get start</Button>
+          <Button variant="contained" color="primary">Get start</Button>
         </Box>
       </ThemeProvider>
     </div>

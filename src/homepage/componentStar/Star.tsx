@@ -8,7 +8,7 @@ import Contentimg from "../componentHeader/Contentimg";
 function Star() {
   const theme = createTheme({
     palette: {
-      black: {
+      primary: {
         main: "#212121",
         contrastText: "#fff",
       },

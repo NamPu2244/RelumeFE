@@ -7,17 +7,16 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import Buttonplans from "./Buttonplans";
 import { ThemeProvider, createTheme } from "@mui/material";
 import { Padding } from "@mui/icons-material";
-import  { dataPro } from "../../../data/dataplans/datapro";
+import { dataPro } from "../../../data/dataplans/datapro";
 
 function Pricingplans(props) {
   // const { planS } = props;
 
   const theme = createTheme({
     palette: {
-      black: {
+      primary: {
         main: "#212121",
         contrastText: "#fff",
       },
@@ -98,13 +97,17 @@ function Pricingplans(props) {
 
                       <Box sx={{ my: 2 }}>
                         <Typography textAlign="center" variant="h3">
-                          {payType == "m" ? `$${row.price} /mo` : `$${row.orprice} yearly`}
+                          {payType == "m"
+                            ? `$${row.price} /mo`
+                            : `$${row.orprice} yearly`}
                         </Typography>
                       </Box>
 
                       <Box sx={{ mb: 5 }}>
                         <Typography textAlign="center" variant="subtitle1">
-                          {payType == "y" ? `or $${row.price} /mo` : `or $${row.orprice} yearly`}
+                          {payType == "y"
+                            ? `or $${row.price} /mo`
+                            : `or $${row.orprice} yearly`}
                         </Typography>
                       </Box>
                     </Box>
@@ -119,7 +122,7 @@ function Pricingplans(props) {
                     <Button
                       variant="contained"
                       size="medium"
-                      color="black"
+                      color="primary"
                       style={{ width: "100%" }}
                     >
                       Get started

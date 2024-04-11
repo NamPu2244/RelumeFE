@@ -17,9 +17,6 @@ function Question(props) {
     setOpen(!open);
   };
 
-  // dataFeqQuestion.map((row) => {
-  //   console.log(row);
-  // });
 
   return (
     <div>

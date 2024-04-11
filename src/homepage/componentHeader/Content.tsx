@@ -12,22 +12,13 @@ import Navbutton from "../componentNav/Navbutton";
 function Content() {
   const theme = createTheme({
     palette: {
-      black: {
+      primary: {
         main: "#212121",
         contrastText: "#fff",
       },
     },
     typography: {
-      textHead: {
-        fontSize: 56,
-        fontWeight: "bold",
-      },
-      textCon: {
-        fontSize: 18,
-      },
-      textTip: {
-        fontSize: 12,
-      },
+
     },
   });
   return (
@@ -54,7 +45,7 @@ function Content() {
             <TextField fullWidth label="Enter your email" id="fullWidth" />
           </Box>
 
-          <Button variant="contained" color="black">
+          <Button variant="contained" color="primary">
             Try for free
           </Button>
         </Box>

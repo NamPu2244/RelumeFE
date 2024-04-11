@@ -6,22 +6,16 @@ import relume from "/Img/Highlight/Relume.svg";
 function Social() {
   const theme = createTheme({
     palette: {
-      black: {
+      primary: {
         main: "#212121",
         contrastText: "#fff",
       },
     },
     typography: {
-      textHead: {
-        fontSize: 48,
-        fontWeight: "bold",
-      },
+
       subtitle2: {
         fontSize: 16,
-      },
-      textTip: {
-        fontSize: 12,
-      },
+      }
     },
   });
   return (

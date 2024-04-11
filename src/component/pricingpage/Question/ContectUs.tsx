@@ -10,7 +10,7 @@ import React from "react";
 function ContectUs() {
   const theme = createTheme({
     palette: {
-      black: {
+      primary: {
         main: "#212121",
         contrastText: "#fff",
       },
@@ -40,7 +40,7 @@ function ContectUs() {
           </Box>
 
           <Box>
-            <Button variant="outlined" color="black">Contect us</Button>
+            <Button variant="outlined" color="primary">Contect us</Button>
           </Box>
         </Box>
       </ThemeProvider>

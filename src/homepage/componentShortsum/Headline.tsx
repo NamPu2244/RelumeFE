@@ -10,23 +10,14 @@ import React from "react";
 function Headline() {
   const theme = createTheme({
     palette: {
-      black: {
+      primary: {
         main: "#212121",
         contrastText: "#fff",
       },
     },
     typography: {
-      textHead: {
-        fontSize: 16,
-        fontWeight: "bold",
-      },
-      textCon: {
-        fontSize: 48,
-        fontWeight: "bold",
-      },
-      textTip: {
-        fontSize: 12,
-      },
+
+
     },
   });
   return (

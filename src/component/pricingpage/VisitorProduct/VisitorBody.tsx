@@ -4,7 +4,7 @@ import React from "react";
 function VisitorBody() {
   const theme = createTheme({
     palette: {
-      black: {
+      primary: {
         main: "#212121",
         contrastText: "#fff",
       },

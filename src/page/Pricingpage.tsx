@@ -1,13 +1,10 @@
 import React, { useMemo } from "react";
 import Introduceplans from "../component/pricingpage/plans/Introduceplans";
-
 import Pricingplans from "../component/pricingpage/plans/Pricingplans";
-import datapro from "../data/dataplans/datapro";
 import { Box } from "@mui/material";
 import datahighlightfeat from "../data/dataplans/datahighlightfeat";
 import Highlight from "../component/pricingpage/Hightlightfeat/Highlight";
 import Tableplans from "../component/pricingpage/tableplans/Tableplans";
-import Buttonplans from "../component/pricingpage/plans/Buttonplans";
 import Compareplans from "../component/pricingpage/tableplans/Compareplans";
 import HeadQuestion from "../component/pricingpage/Question/HeadQuestion";
 import ContectUs from "../component/pricingpage/Question/ContectUs";
@@ -18,11 +15,6 @@ import VisitorBody from "../component/pricingpage/VisitorProduct/VisitorBody";
 import VisitorButton from "../component/pricingpage/VisitorProduct/VisitorButton";
 
 function Pricingpage() {
-  // const plansEls = useMemo(() => {
-  //   return datapro.map((planS, index) => {
-  //     return <Pricingplans key={index} planS={planS} />;
-  //   });
-  // }, [datapro]);
 
   const highEls = useMemo(() => {
     return datahighlightfeat.map((highLight, index) => {
@@ -44,17 +36,15 @@ function Pricingpage() {
         </Box>
 
         <Box sx={{ pb: 28 }}>
-          
-
           <Box
             sx={{
               display: "grid",
               justifyContent: "center",
-              
+
               gap: 5,
             }}
           >
-            <Pricingplans/>
+            <Pricingplans />
           </Box>
         </Box>
 
@@ -80,11 +70,11 @@ function Pricingpage() {
           <ContectUs />
         </Box>
 
-        <Box sx={{ pb: 12 , px:28 }}>
-          <Box sx={{mb:6}}>
+        <Box sx={{ pb: 12, px: 28 }}>
+          <Box sx={{ mb: 6 }}>
             <VisitorHead />
           </Box>
-          <Box sx={{mb:6}}>
+          <Box sx={{ mb: 6 }}>
             <VisitorBody />
           </Box>
           <Box>

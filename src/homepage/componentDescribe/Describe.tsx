@@ -9,11 +9,10 @@ import React from "react";
 
 function Describe() {
   const theme = createTheme({
-
     typography: {
       subtitle2: {
         fontWeight: "bold",
-      }
+      },
     },
   });
   return (
@@ -43,10 +42,10 @@ function Describe() {
         </Typography>
 
         <div>
-        <Box sx={{ mt: 3 }}>
-          <Button variant="outlined" color="inherit">
-            Learn more
-          </Button>
+          <Box sx={{ mt: 3 }}>
+            <Button variant="outlined" color="inherit">
+              Learn more
+            </Button>
           </Box>
         </div>
       </ThemeProvider>

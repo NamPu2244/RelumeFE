@@ -7,25 +7,33 @@ function Linkf() {
       caption: {
         fontSize: 16,
         fontWeight: 500,
-      }
+      },
     },
   });
   return (
     <div>
       <ThemeProvider theme={theme}>
         <Box sx={{ display: "flex", gap: 5 }}>
-          <Typography variant="caption">
-            <a>Linknk One</a>
-          </Typography>
-          <Typography variant="caption">
-            <a>Linknk Two</a>
-          </Typography>
-          <Typography variant="caption">
-            <a>Linknk Three</a>
-          </Typography>
-          <Typography variant="caption">
-            <a>Linknk Four</a>
-          </Typography>
+          <Box sx={{cursor:'pointer'}}>
+            <Typography variant="caption">
+              <a>Linknk One</a>
+            </Typography>
+          </Box>
+          <Box sx={{cursor:'pointer'}}>
+            <Typography variant="caption">
+              <a>Linknk Two</a>
+            </Typography>
+          </Box>
+          <Box sx={{cursor:'pointer'}}>
+            <Typography variant="caption">
+              <a>Linknk Three</a>
+            </Typography>
+          </Box>
+          <Box sx={{cursor:'pointer'}}>
+            <Typography variant="caption">
+              <a>Linknk Four</a>
+            </Typography>
+          </Box>
         </Box>
       </ThemeProvider>
     </div>

@@ -27,7 +27,7 @@ function Tableplans() {
 
   const theme = createTheme({
     palette: {
-      black: {
+      primary: {
         main: "#212121",
         contrastText: "#fff",
       },
@@ -61,7 +61,7 @@ function Tableplans() {
                       <Typography variant="subtitle1">Lorem ipsum dolor sit amet</Typography>
                     </Box>
                     <Box>
-                      <Button variant="contained" size="medium" color="black" style={{width:"100%"}}>Get started</Button>
+                      <Button variant="contained" size="medium" color="primary" style={{width:"100%"}}>Get started</Button>
                     </Box>
                   </Box>
                 </TableCell>
@@ -74,7 +74,7 @@ function Tableplans() {
                       <Typography variant="subtitle1">Lorem ipsum dolor sit amet</Typography>
                     </Box>
                     <Box>
-                      <Button variant="contained" size="medium" color="black" style={{width:"100%"}}>Get started</Button>
+                      <Button variant="contained" size="medium" color="primary" style={{width:"100%"}}>Get started</Button>
                     </Box>
                   </Box>
                 </TableCell>
@@ -87,7 +87,7 @@ function Tableplans() {
                       <Typography variant="subtitle1">Lorem ipsum dolor sit amet</Typography>
                     </Box>
                     <Box>
-                      <Button variant="contained" size="medium" color="black" style={{width:"100%"}}>Get started</Button>
+                      <Button variant="contained" size="medium" color="primary" style={{width:"100%"}}>Get started</Button>
                     </Box>
                   </Box>
                 </TableCell>

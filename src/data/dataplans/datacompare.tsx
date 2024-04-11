@@ -1,8 +1,14 @@
 import CheckIcon from '@mui/icons-material/Check';
+import { SvgIconClasses, SvgIconProps } from '@mui/material';
+import { ReactElement } from 'react';
+
+
+// let myIcon: React.ReactElement<SvgIconProps> = <CheckIcon />; 
+
 type DataCompare = {
-  basic: string | number;
-  business: string | number;
-  enterprise: string | number;
+  basic:  string | number | ReactElement;
+  business: string | number | ReactElement;
+  enterprise: string | number | ReactElement;
   featureName: string;
 };
 

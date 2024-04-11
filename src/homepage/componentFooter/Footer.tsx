@@ -15,7 +15,7 @@ function Footer() {
     typography: {
       caption: {
         fontSize: 14,
-      }
+      },
     },
   });
   return (
@@ -39,6 +39,7 @@ function Footer() {
 
         <div>
           <div>
+            
             <Box
               sx={{
                 borderTop: 1,
@@ -56,23 +57,33 @@ function Footer() {
                   mt: 4,
                 }}
               >
-                <Typography variant="caption">
-                  <div>© 2023 Relume. All rights reserved.</div>
-                </Typography>
+                <Box sx={{ cursor: "pointer" }}>
+                  <Typography variant="caption">
+                    <div>© 2023 Relume. All rights reserved.</div>
+                  </Typography>
+                </Box>
 
-                <Typography variant="caption">
-                  <u>Privacy Policy</u>
-                </Typography>
+                <Box sx={{ cursor: "pointer" }}>
+                  <Typography variant="caption">
+                    <u>Privacy Policy</u>
+                  </Typography>
+                </Box>
 
-                <Typography variant="caption">
-                  <u>Terms of Service</u>
-                </Typography>
+                <Box sx={{ cursor: "pointer" }}>
+                  <Typography variant="caption">
+                    <u>Terms of Service</u>
+                  </Typography>
+                </Box>
 
-                <Typography variant="caption">
-                  <u>Cookies Settings</u>
-                </Typography>
+                <Box sx={{ cursor: "pointer" }}>
+                  <Typography variant="caption">
+                    <u>Cookies Settings</u>
+                  </Typography>
+                </Box>
               </Box>
             </div>
+
+
           </div>
         </div>
       </ThemeProvider>

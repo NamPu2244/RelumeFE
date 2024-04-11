@@ -10,7 +10,7 @@ import React from "react";
 function Fequently() {
   const theme = createTheme({
     palette: {
-      black: {
+      primary: {
         main: "#212121",
         contrastText: "#fff",
       },
@@ -22,10 +22,7 @@ function Fequently() {
       },
       subtitle1: {
         fontSize: 18,
-      },
-      textTip: {
-        fontSize: 18,
-      },
+      }
     },
   });
   return (
