@@ -25,6 +25,7 @@ import dataquestion from "../data/dataquestion";
 import React from "react";
 import { useMemo } from "react";
 import HeaderContent from "../component/organisms/homePage/homeHeader/HeaderContent";
+import HighlightOr from "../component/organisms/homePage/homeHighlight/HighlightOr";
 
 function HomePage() {
   const hightlightEls = useMemo(() => {
@@ -53,15 +54,7 @@ function HomePage() {
 
         <div>
           <Box sx={{ my: 14 }}>
-            <Box
-              sx={{
-                display: "grid",
-                gridTemplateColumns: "repeat(3, 1fr)",
-                gap: 5,
-              }}
-            >
-              {hightlightEls}
-            </Box>
+            <HighlightOr/>
           </Box>
         </div>
 

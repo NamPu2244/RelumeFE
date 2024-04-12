@@ -31,7 +31,7 @@ function Highlight(props) {
         <div>
           <ThemeProvider theme={theme}>
             <Box sx={{ mb: 3 }}>
-              <img src={highlight} />
+              <img src="/Img/Highlight/Vector.svg"/>
             </Box>
 
             <Typography variant="h5">

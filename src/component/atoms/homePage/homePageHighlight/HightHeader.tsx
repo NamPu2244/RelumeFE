@@ -8,7 +8,8 @@ import {
   createTheme,
 } from "@mui/material";
 
-function HightHeader() {
+function HightHeader(props) {
+  const {high} = props
   const theme = createTheme({
     typography: {
       h5: {
@@ -18,10 +19,12 @@ function HightHeader() {
   });
   return (
     <div>
+
+      
       <ThemeProvider theme={theme}>
         <Typography variant="h5">
           <Box sx={{ mb: 3 }}>
-            <div>Highlight benefit one</div>
+            <div>{high}</div>
           </Box>
         </Typography>
       </ThemeProvider>

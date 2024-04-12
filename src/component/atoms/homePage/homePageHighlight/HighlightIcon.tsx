@@ -8,7 +8,9 @@ import {
   createTheme,
 } from "@mui/material";
 
-function HighlightIcon() {
+function HighlightIcon(props) {
+
+  const {high} = props
   return (
     <div>
       <Box sx={{ mb: 3 }}>

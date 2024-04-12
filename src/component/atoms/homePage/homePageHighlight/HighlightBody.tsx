@@ -7,14 +7,14 @@ import {
   createTheme,
 } from "@mui/material";
 
-function HighlightBody() {
+function HighlightBody(props) {
+
+  const {high} = props;
   return (
     <div>
       <Typography variant="body2">
         <div>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-          ornare, eros dolor interdum nulla.
+          {high}
         </div>
       </Typography>
     </div>
