@@ -14,35 +14,45 @@ import SendIcon from "@mui/icons-material/Send";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import StarBorder from "@mui/icons-material/StarBorder";
+import dataquestion from "../../../../data/dataquestion";
 
 function Quention() {
-  const [open, setOpen] = React.useState(false);
-  const handleClick = () => {
-    setOpen(!open);
+  const [openState, setOpenState] = React.useState({});
+
+  const handleClick = (index) => {
+    setOpenState((prevState) => ({
+      ...prevState,
+      [index]: !prevState[index],
+    }));
   };
+  
   return (
     <div>
-      <List
-        sx={{ width: "100%", bgcolor: "background.paper" }}
-        component="nav"
-        aria-labelledby="nested-list-subheader"
-      >
-        <Divider />
-        <ListItemButton onClick={handleClick}>
-          <ListItemText primary={"Question text goes here"} />
-          {open ? <ExpandLess /> : <ExpandMore />}
-        </ListItemButton>
-
-        <Collapse in={open} timeout="auto" unmountOnExit>
-          <List component="div" disablePadding>
-            <ListItemButton sx={{ pl: 4 }}>
-              <ListItemText primary={"Answer text goes here"} />
-            </ListItemButton>
-          </List>
-        </Collapse>
-      </List>
+      {dataquestion.map((row, index) => (
+        <List
+          sx={{ width: "100%", bgcolor: "background.paper" }}
+          component="nav"
+          aria-labelledby="nested-list-subheader"
+          key={index}
+        >
+          <Divider />
+          <ListItemButton onClick={() => handleClick(index)}>
+            <ListItemText primary={row.title} />
+            {openState[index] ? <ExpandLess /> : <ExpandMore />}
+          </ListItemButton>
+  
+          <Collapse in={openState[index]} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItemButton sx={{ pl: 4 }}>
+                <ListItemText primary={row.content} />
+              </ListItemButton>
+            </List>
+          </Collapse>
+        </List>
+      ))}
     </div>
   );
+  
 }
 
 export default Quention;

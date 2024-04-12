@@ -27,6 +27,7 @@ import { useMemo } from "react";
 import HeaderContent from "../component/organisms/homePage/homeHeader/HeaderContent";
 import HighlightOr from "../component/organisms/homePage/homeHighlight/HighlightOr";
 import HomeShortSum from "../component/organisms/homePage/homeShortSum/HomeShortSum";
+import HomeQuestion from "../component/organisms/homePage/homeQuestion/HomeQuestion";
 
 function HomePage() {
   const hightlightEls = useMemo(() => {
@@ -50,17 +51,17 @@ function HomePage() {
     <div>
       <Box>
         <div>
-          <HeaderContent/>
+          <HeaderContent />
         </div>
 
         <div>
           <Box sx={{ my: 14 }}>
-            <HighlightOr/>
+            <HighlightOr />
           </Box>
         </div>
 
         <div>
-          <HomeShortSum/>
+          <HomeShortSum />
         </div>
 
         <div>
@@ -131,13 +132,15 @@ function HomePage() {
         </div>
 
         <div>
-          <Grid container gap={10} justifyContent="center" alignItems="center">
+          {/* <Grid container gap={10} justifyContent="center" alignItems="center">
             <Grid xs={4}>
               <Fequently />
             </Grid>
 
             <Grid xs={6}>{questionEls}</Grid>
-          </Grid>
+          </Grid> */}
+
+          <HomeQuestion />
         </div>
       </Box>
     </div>
