@@ -3,7 +3,6 @@ import { SvgIconClasses, SvgIconProps } from '@mui/material';
 import { ReactElement } from 'react';
 
 
-// let myIcon: React.ReactElement<SvgIconProps> = <CheckIcon />; 
 
 type DataCompare = {
   basic:  string | number | ReactElement;
