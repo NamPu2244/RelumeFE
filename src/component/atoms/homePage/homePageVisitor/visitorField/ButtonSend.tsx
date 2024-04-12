@@ -9,12 +9,22 @@ import {
 } from "@mui/material";
 
 function ButtonSend() {
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: "#212121",
+        contrastText: "#fff",
+      },
+    },
+  });
   return (
-    <div>
-      <Button variant="contained" color="primary">
-        Try for free
-      </Button>
-    </div>
+
+      <ThemeProvider theme={theme}>
+        <Button variant="contained" color="primary">
+          Try for free
+        </Button>
+      </ThemeProvider>
+
   );
 }
 

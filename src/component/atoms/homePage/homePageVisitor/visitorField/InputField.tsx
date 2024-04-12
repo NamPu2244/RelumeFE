@@ -10,7 +10,7 @@ import {
 
 function InputField() {
   return (
-    <div>
+
       <Box
         sx={{
           width: 357,
@@ -19,7 +19,7 @@ function InputField() {
       >
         <TextField fullWidth label="Enter your email" id="fullWidth" />
       </Box>
-    </div>
+
   );
 }
 

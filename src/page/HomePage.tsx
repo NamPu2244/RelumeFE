@@ -28,25 +28,26 @@ import HeaderContent from "../component/organisms/homePage/homeHeader/HeaderCont
 import HighlightOr from "../component/organisms/homePage/homeHighlight/HighlightOr";
 import HomeShortSum from "../component/organisms/homePage/homeShortSum/HomeShortSum";
 import HomeQuestion from "../component/organisms/homePage/homeQuestion/HomeQuestion";
+import HomeVisitor from "../component/organisms/homePage/homeVisitor/HomeVisitor";
 
 function HomePage() {
-  const hightlightEls = useMemo(() => {
-    return datahightlight.map((hightLight, index) => {
-      return <Highlight key={index} hightLight={hightLight} />;
-    });
-  }, [datahightlight]);
+  // const hightlightEls = useMemo(() => {
+  //   return datahightlight.map((hightLight, index) => {
+  //     return <Highlight key={index} hightLight={hightLight} />;
+  //   });
+  // }, [datahightlight]);
 
-  const shortsumEls = useMemo(() => {
-    return datashortsum.map((shortSum, index) => {
-      return <Shortsum key={index} shortSum={shortSum} />;
-    });
-  }, [datashortsum]);
+  // const shortsumEls = useMemo(() => {
+  //   return datashortsum.map((shortSum, index) => {
+  //     return <Shortsum key={index} shortSum={shortSum} />;
+  //   });
+  // }, [datashortsum]);
 
-  const questionEls = useMemo(() => {
-    return dataquestion.map((quesTions, index) => {
-      return <Question key={index} quesTions={quesTions} />;
-    });
-  }, [dataquestion]);
+  // const questionEls = useMemo(() => {
+  //   return dataquestion.map((quesTions, index) => {
+  //     return <Question key={index} quesTions={quesTions} />;
+  //   });
+  // }, [dataquestion]);
   return (
     <div>
       <Box>
@@ -125,10 +126,12 @@ function HomePage() {
         </div>
 
         <div>
-          <Box sx={{ my: 14 }}>
+          {/* <Box sx={{ my: 14 }}>
             <Visitor />
             <Social />
-          </Box>
+          </Box> */}
+
+          <HomeVisitor/>
         </div>
 
         <div>
