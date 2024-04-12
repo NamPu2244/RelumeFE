@@ -1,11 +1,13 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 
-function ShortSumHeader() {
+function ShortSumHeader(props) {
+  const {sum} = props;
+
   return (
     <div>
       <Typography variant="h5">
-        <div>Short summary of step one</div>
+        <div>{sum}</div>
       </Typography>
     </div>
   );

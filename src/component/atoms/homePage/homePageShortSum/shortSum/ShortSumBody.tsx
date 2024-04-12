@@ -1,13 +1,14 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 
-function ShortSumBody() {
+function ShortSumBody(props) {
+  const {sum} = props;
+
   return (
     <div>
       <Typography variant="body1">
         <div>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in eros elementum tristique.
+          {sum}
         </div>
       </Typography>
     </div>

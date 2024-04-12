@@ -26,6 +26,7 @@ import React from "react";
 import { useMemo } from "react";
 import HeaderContent from "../component/organisms/homePage/homeHeader/HeaderContent";
 import HighlightOr from "../component/organisms/homePage/homeHighlight/HighlightOr";
+import HomeShortSum from "../component/organisms/homePage/homeShortSum/HomeShortSum";
 
 function HomePage() {
   const hightlightEls = useMemo(() => {
@@ -59,26 +60,7 @@ function HomePage() {
         </div>
 
         <div>
-          <Box sx={{ my: 14 }}>
-            <Grid container>
-              <Grid xs={6}>
-                <Box sx={{ mr: 10 }}>
-                  <Headline />
-                </Box>
-              </Grid>
-              <Grid xs={6}>
-                <Box
-                  sx={{
-                    display: "grid",
-                    gridTemplateRows: "repeat(3, 1fr)",
-                    gap: 5,
-                  }}
-                >
-                  {shortsumEls}
-                </Box>
-              </Grid>
-            </Grid>
-          </Box>
+          <HomeShortSum/>
         </div>
 
         <div>

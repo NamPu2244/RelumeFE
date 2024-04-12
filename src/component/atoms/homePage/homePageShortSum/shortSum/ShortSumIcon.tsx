@@ -3,7 +3,9 @@ import highlight from "/Img/Highlight/Vector.svg";
 
 import { Box, Typography } from "@mui/material";
 
-function ShortSumIcon() {
+function ShortSumIcon(props) {
+  const {sum} = props;
+
   return (
     <div>
       <Box sx={{ mb: 2 }}>
