@@ -10,6 +10,7 @@ import Typography from "@mui/material/Typography";
 import { ThemeProvider, createTheme } from "@mui/material";
 import { Padding } from "@mui/icons-material";
 import { dataPro } from "../../../data/dataplans/datapro";
+import CheckIcon from "@mui/icons-material/Check";
 
 function Pricingplans(props) {
   // const { planS } = props;
@@ -112,7 +113,8 @@ function Pricingplans(props) {
                       </Box>
                     </Box>
                     {row.dataFeature.map((data) => (
-                      <Box sx={{ mb: 2 }}>
+                      <Box sx={{ mb: 2, display: "flex", gap: 1 }}>
+                        <CheckIcon />
                         <Typography>{data.featureName}</Typography>
                       </Box>
                     ))}

@@ -15,7 +15,6 @@ function HighlightOr() {
       <Box >
          <Highlight/>
       </Box>
-      
     </div>
   )
 }

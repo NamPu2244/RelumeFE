@@ -7,9 +7,9 @@ import ListItemText from "@mui/material/ListItemText";
 import Collapse from "@mui/material/Collapse";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
-import dataquestion from "../../../../data/dataquestion";
+import { dataFeqQuestion } from "../../../../data/dataplans/dataQuestion";
 
-function Quention() {
+function QuestionContet() {
   const [openState, setOpenState] = React.useState({});
 
   const handleClick = (index) => {
@@ -21,7 +21,7 @@ function Quention() {
 
   return (
     <div>
-      {dataquestion.map((row, index) => (
+      {dataFeqQuestion.map((row, index) => (
         <List
           sx={{ width: "100%", bgcolor: "background.paper" }}
           component="nav"
@@ -30,14 +30,14 @@ function Quention() {
         >
           <Divider />
           <ListItemButton onClick={() => handleClick(index)}>
-            <ListItemText primary={row.title} />
+            <ListItemText primary={row.question} />
             {openState[index] ? <ExpandLess /> : <ExpandMore />}
           </ListItemButton>
 
           <Collapse in={openState[index]} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
               <ListItemButton sx={{ pl: 4 }}>
-                <ListItemText primary={row.content} />
+                <ListItemText primary={row.answer} />
               </ListItemButton>
             </List>
           </Collapse>
@@ -47,4 +47,4 @@ function Quention() {
   );
 }
 
-export default Quention;
+export default QuestionContet;

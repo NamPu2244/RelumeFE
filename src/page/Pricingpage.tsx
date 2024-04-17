@@ -13,9 +13,14 @@ import { dataFeqQuestion } from "../data/dataplans/dataQuestion";
 import VisitorHead from "../component/pricingpage/VisitorProduct/VisitorHead";
 import VisitorBody from "../component/pricingpage/VisitorProduct/VisitorBody";
 import VisitorButton from "../component/pricingpage/VisitorProduct/VisitorButton";
+import PricingVisitor from "../component/molecules/pricingPage/pricingVisitor/PricingVisitor";
+import ContentHeader from "../component/molecules/pricingPage/picingPlans/contentHeader/ContentHeader";
+import PricingHighlight from "../component/molecules/pricingPage/pricingHighlight/PricingHighlight";
+import Highlights from "../component/organisms/pricingPage/highlightPricing/Highlights";
+import QuestionsPricing from "../component/organisms/pricingPage/questionPricing/QuestionsPricing";
+import VisitorPricing from "../component/organisms/pricingPage/visitorPricing/VisitorPricing";
 
 function Pricingpage() {
-
   const highEls = useMemo(() => {
     return datahighlightfeat.map((highLight, index) => {
       return <Highlight key={index} highLight={highLight} />;
@@ -32,7 +37,7 @@ function Pricingpage() {
     <div>
       <Box sx={{ my: 14 }}>
         <Box sx={{ mb: 12 }}>
-          <Introduceplans />
+          <ContentHeader />
         </Box>
 
         <Box sx={{ pb: 28 }}>
@@ -48,9 +53,7 @@ function Pricingpage() {
           </Box>
         </Box>
 
-        <Box sx={{ display: "flex", justifyContent: "center", gap: 5, pb: 28 }}>
-          {highEls}
-        </Box>
+        <Highlights />
 
         <Box sx={{ pb: 28 }}>
           <Box sx={{ mb: 20 }}>
@@ -60,26 +63,12 @@ function Pricingpage() {
           <Tableplans />
         </Box>
 
-        <Box sx={{ display: "grid", justifyContent: "center", px: 28, pb: 28 }}>
-          <Box sx={{ mb: 10 }}>
-            <HeadQuestion />
-          </Box>
-
-          <Box sx={{ mb: 10 }}>{questionEls}</Box>
-
-          <ContectUs />
+        <Box>
+          <QuestionsPricing />
         </Box>
 
-        <Box sx={{ pb: 12, px: 28 }}>
-          <Box sx={{ mb: 6 }}>
-            <VisitorHead />
-          </Box>
-          <Box sx={{ mb: 6 }}>
-            <VisitorBody />
-          </Box>
-          <Box>
-            <VisitorButton />
-          </Box>
+        <Box>
+          <VisitorPricing />
         </Box>
       </Box>
     </div>
