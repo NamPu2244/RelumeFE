@@ -12,6 +12,9 @@ import HomePage from "./page/HomePage";
 import Pricingpage from "./page/Pricingpage";
 import NavBar from "./component/organisms/navBar/NavBar";
 import Footer from "./component/organisms/footer/Footer";
+import BlogPage from "./page/BlogPage";
+import { Provider } from "react-redux";
+import store from "./store/Store";
 
 function App() {
   return (
@@ -20,14 +23,17 @@ function App() {
         <header>
           <NavBar />
         </header>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/pricing" element={<Pricingpage />} />
-        </Routes>
+        <Provider store={store}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/pricing" element={<Pricingpage />} />
+            <Route path="/blog" element={<BlogPage />} />
+          </Routes>
+        </Provider>
 
         <footer>
           <Box sx={{ my: 14 }}>
-            <Footer/>
+            <Footer />
           </Box>
         </footer>
       </Container>

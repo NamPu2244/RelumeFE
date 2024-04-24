@@ -5,13 +5,13 @@ import { Navigate, useNavigate } from "react-router-dom";
 function LinkTwo() {
   const navigate = useNavigate();
 
-  const pricingPage = () => {
-    navigate("/pricing");
+  const blogPage = () => {
+    navigate("/blog");
   };
   return (
     <Box sx={{ cursor: "pointer" }}>
       <Typography variant="body2">
-        <a onClick={pricingPage}>Link Two</a>
+        <a onClick={blogPage}>Link Two</a>
       </Typography>
     </Box>
   );
