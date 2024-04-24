@@ -21,18 +21,6 @@ import QuestionsPricing from "../component/organisms/pricingPage/questionPricing
 import VisitorPricing from "../component/organisms/pricingPage/visitorPricing/VisitorPricing";
 
 function Pricingpage() {
-  const highEls = useMemo(() => {
-    return datahighlightfeat.map((highLight, index) => {
-      return <Highlight key={index} highLight={highLight} />;
-    });
-  }, [datahighlightfeat]);
-
-  const questionEls = useMemo(() => {
-    return dataFeqQuestion.map((dataQues, index) => {
-      return <Question key={index} dataQues={dataQues} />;
-    });
-  }, [dataFeqQuestion]);
-
   return (
     <div>
       <Box sx={{ my: 14 }}>
@@ -53,7 +41,9 @@ function Pricingpage() {
           </Box>
         </Box>
 
-        <Highlights />
+        <Box>
+          <Highlights />
+        </Box>
 
         <Box sx={{ pb: 28 }}>
           <Box sx={{ mb: 20 }}>
